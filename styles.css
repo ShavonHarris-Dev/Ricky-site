@@ -1338,6 +1338,105 @@ main {
     font-size: 1.1rem;
 }
 
+/* Review CTA Section */
+.review-cta {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 40px 0;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.review-cta-content h4 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.review-cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.review-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.review-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.google-btn {
+    background: white;
+    color: #4285f4;
+    border: 2px solid white;
+}
+
+.google-btn:hover {
+    background: #4285f4;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(66, 133, 244, 0.3);
+}
+
+.phone-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.phone-btn:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.review-note {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .review-cta {
+        padding: 30px 20px;
+        margin: 30px 0;
+    }
+    
+    .review-cta-content h4 {
+        font-size: 1.5rem;
+    }
+    
+    .review-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .review-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
 /* CTA Section */
 .cta-section {
     padding: 60px 0;

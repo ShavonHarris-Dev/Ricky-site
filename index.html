@@ -540,6 +540,24 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="review-cta">
+                <div class="review-cta-content">
+                    <h4>Love Our Work?</h4>
+                    <p>Help other homeowners find quality handyman services by leaving us a review!</p>
+                    <div class="review-buttons">
+                        <a href="https://g.page/r/CXCPHp4819qQEBM/review" target="_blank" class="review-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            Write a Google Review
+                        </a>
+                        <a href="tel:7084978893" class="review-btn phone-btn">
+                            <i class="fas fa-phone"></i>
+                            Call to Share Feedback
+                        </a>
+                    </div>
+                    <p class="review-note">Your honest feedback helps us improve and helps neighbors find trusted service!</p>
+                </div>
+            </div>
         </section>
 
         <section class="faq-section">
@@ -898,9 +916,22 @@
                 message: form.querySelector('textarea[name="message"]')?.value || ''
             };
             
-            // Validate required fields
+            // Validate required fields and basic security
             if (!data.name || !data.email || !data.phone) {
                 alert('Please fill in all required fields (Name, Email, and Phone).');
+                return false;
+            }
+            
+            // Basic security checks
+            if (data.name.length > 100 || data.email.length > 100 || data.phone.length > 20) {
+                alert('Please enter reasonable field lengths.');
+                return false;
+            }
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Please enter a valid email address.');
                 return false;
             }
             
