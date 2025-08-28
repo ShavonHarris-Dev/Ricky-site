@@ -1441,6 +1441,22 @@ footer {
     margin-bottom: 40px;
 }
 
+/* Mobile footer override */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+}
+
+/* Extra mobile footer override */
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
 .footer-info h4 {
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -1572,7 +1588,89 @@ footer {
 }
 
 /* Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 250px 1fr;
+        gap: 30px;
+    }
+    
+    
+    .profile-placeholder i {
+        font-size: 4rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .form-benefits,
+    .form-guarantees {
+        gap: 20px;
+    }
+}
+
+/* Simple fix: About grid now just contains one item */
 @media (max-width: 768px) {
+    .about-grid {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .about-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: left !important;
+    }
+}
+
+/* OPTION B: Move ECV box to top (commented out) */
+/*
+@media (max-width: 768px) {
+    .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        text-align: center !important;
+    }
+    
+    .about-image {
+        order: 1 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .profile-placeholder {
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        padding: 25px 20px !important;
+    }
+    
+    .about-content {
+        order: 2 !important;
+        text-align: left !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+}
+*/
+
+/* Standard tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -1583,12 +1681,56 @@ footer {
     
     .logo {
         gap: 10px;
+        flex-wrap: wrap;
     }
     
     .logo i {
         font-size: 2rem;
     }
     
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    main {
+        margin: 20px 10px;
+    }
+    
+    /* About section mobile styling */
+    .profile-placeholder {
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        padding: 30px 25px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    
+    .profile-placeholder i {
+        font-size: 4rem !important;
+        color: #ffa726 !important;
+    }
+    
+    .profile-placeholder span {
+        font-size: 1.3rem !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        color: white !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Services section mobile */
     .services-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1596,49 +1738,50 @@ footer {
     
     .services-list {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 30px;
     }
     
-    .credentials-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .cta-buttons {
+    .service-item {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
     
-    .btn {
-        width: 100%;
-        max-width: 300px;
+    .service-item i {
+        font-size: 2.5rem !important;
     }
     
-    main {
-        margin: 20px 10px;
-    }
-    
-    .hero-content {
-        padding: 30px 20px;
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
     
     .section-header h3 {
         font-size: 1.5rem;
     }
     
-    .credentials-section h3 {
-        font-size: 2rem;
+    /* Contact info mobile */
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
     
-    .cta-section h3 {
-        font-size: 2rem;
-    }
-    
+    /* Emergency banner mobile */
     .emergency-banner {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        padding: 25px;
     }
     
+    .emergency-banner i {
+        font-size: 2.5rem;
+    }
+    
+    /* Business hours mobile */
     .business-info-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1646,58 +1789,394 @@ footer {
     
     .areas-list {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
     
-    .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .area-item {
+        font-size: 1rem;
     }
     
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
+    /* Grid layouts mobile */
+    .credentials-grid,
+    .pricing-grid,
+    .gallery-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Form mobile */
     .form-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
+    .form-benefits,
+    .form-guarantees {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* CTA section mobile */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* Footer mobile */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+        text-align: left;
+    }
+    
+    .footer-info {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .footer-services,
+    .footer-areas {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .footer-services h5,
+    .footer-areas h5 {
+        margin-bottom: 15px;
+    }
+    
+    .footer-social {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Typography adjustments */
+    .credentials-section h3,
+    .cta-section h3,
     .pricing-section h3,
     .gallery-section h3,
     .testimonials-section h3,
-    .contact-form-section h3 {
+    .contact-form-section h3,
+    .faq-section h3 {
         font-size: 2rem;
+    }
+    
+    .pricing-subtitle,
+    .gallery-subtitle,
+    .form-subtitle,
+    .faq-subtitle {
+        font-size: 1rem;
     }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+        max-width: 100%;
+    }
+    
+    .hero {
+        padding: 30px 0;
+    }
+    
     .hero h1 {
         font-size: 2rem;
+        line-height: 1.2;
     }
     
     .hero h2 {
         font-size: 1.2rem;
+        margin-bottom: 15px;
     }
     
     .tagline {
         font-size: 1rem;
     }
     
+    .hero-content {
+        padding: 25px 15px;
+    }
+    
+    main {
+        margin: 15px 8px;
+        border-radius: 15px;
+    }
+    
+    /* Sections padding */
+    .about-section,
+    .services-section,
+    .credentials-section,
+    .business-hours-section,
+    .pricing-section,
+    .gallery-section,
+    .faq-section,
+    .testimonials-section,
+    .contact-form-section,
+    .cta-section {
+        padding: 30px 0;
+    }
+    
+    /* Service items mobile */
     .service-item {
+        padding: 20px 15px;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+    
+    .service-description {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
+    
+    .service-price {
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    
+    /* Contact items mobile */
+    .contact-item {
         padding: 15px;
+        gap: 12px;
+    }
+    
+    .contact-item span {
+        font-size: 1rem;
+    }
+    
+    /* Cards mobile */
+    .credential-item,
+    .pricing-item,
+    .gallery-item,
+    .testimonial-item,
+    .faq-item {
+        padding: 20px 15px;
+    }
+    
+    /* Emergency section mobile */
+    .emergency-section {
+        padding: 25px 0;
+        margin: 25px 0;
+    }
+    
+    .emergency-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .emergency-content p {
+        font-size: 1rem;
+    }
+    
+    /* Hours and areas mobile */
+    .hour-item {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .area-item {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* Form mobile */
+    .contact-form {
+        padding: 0 10px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .submit-btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .urgent-notice {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    /* Typography mobile */
+    .credentials-section h3,
+    .cta-section h3,
+    .pricing-section h3,
+    .gallery-section h3,
+    .testimonials-section h3,
+    .contact-form-section h3,
+    .faq-section h3 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .section-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Buttons mobile */
+    .btn {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+        min-width: auto;
+    }
+    
+    .services-btn,
+    .area-btn,
+    .gallery-btn,
+    .faq-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Footer mobile */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .footer-services ul,
+    .footer-areas ul {
+        columns: 1;
+        column-gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer-services li,
+    .footer-areas li {
+        padding: 6px 0;
+        font-size: 0.95rem;
+        break-inside: avoid;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .service-item {
+        padding: 12px;
     }
     
     .contact-item {
-        padding: 15px;
+        padding: 12px;
     }
     
-    .credential-item {
-        padding: 20px;
+    .credential-item,
+    .pricing-item,
+    .testimonial-item {
+        padding: 15px 10px;
+    }
+    
+    .emergency-banner {
+        padding: 20px 15px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Footer extra small screens */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+}
+
+/* Landscape phone orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 20px 0;
+    }
+    
+    .hero-content {
+        padding: 20px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .logo i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet specific optimizations */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 200px 1fr;
+        gap: 25px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .credentials-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 }
