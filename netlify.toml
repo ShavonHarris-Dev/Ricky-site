@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/services"
+  to = "/#services"
+  status = 302
+
+[[redirects]]
+  from = "/about"
+  to = "/#about"
+  status = 302
+
+[[redirects]]
+  from = "/gallery"
+  to = "/#gallery"
+  status = 302
+
+[[redirects]]
+  from = "/testimonials"
+  to = "/#testimonials"
+  status = 302
+
+[[redirects]]
+  from = "/contact"
+  to = "/#contact"
+  status = 302
