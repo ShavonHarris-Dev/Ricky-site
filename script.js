@@ -19,6 +19,16 @@ if (mobileToggle) {
     });
 }
 
+// Mobile dropdown toggle
+document.querySelectorAll('.nav-dropdown > a').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
+
 // Close mobile menu on link click
 document.querySelectorAll('.nav-links a').forEach(function(link) {
     link.addEventListener('click', function() {
