@@ -22,7 +22,7 @@ if (mobileToggle) {
 // Mobile dropdown toggle
 document.querySelectorAll('.nav-dropdown > a').forEach(function(trigger) {
     trigger.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 900) {
             e.preventDefault();
             this.parentElement.classList.toggle('open');
         }
