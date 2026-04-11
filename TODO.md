@@ -1,6 +1,6 @@
 # ECV Handyman Services - TODO
 
-- [ ] **Set up Google Analytics** — GA4 tracking code is installed (G-XXXXXXXXXX placeholder). Go to analytics.google.com, create a GA4 property, get your real Measurement ID, and replace G-XXXXXXXXXX in ALL HTML files (index.html + 13 service/location pages)
+- [ ] **Set up Google Analytics** — GA4 tracking code is installed (G-MGSXDR8L1N placeholder). Go to analytics.google.com, create a GA4 property, get your real Measurement ID, and replace G-MGSXDR8L1N in ALL HTML files (index.html + 13 service/location pages)
 - [ ] **Verify sitemap.xml is being indexed** — Resubmit the updated sitemap to Google Search Console
 - [ ] **Replace hero image with a work photo** — Current image is a personal photo at a restaurant. Use a shot of Ricky on a job site to convert better
 - [ ] **Optimize images** — Compress and convert images to WebP format. Current images are 3-4MB each which hurts page speed and Core Web Vitals (Google ranking factor)
