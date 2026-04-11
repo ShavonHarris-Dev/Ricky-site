@@ -1,5 +1,5 @@
-// Google Analytics 4 — Replace G-MGSXDR8L1N with your real Measurement ID
+// Google Analytics 4
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-MGSXDR8L1N');
+gtag('config', 'G-XXTKY4600');
