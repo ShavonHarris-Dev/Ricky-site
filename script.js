@@ -1,3 +1,7 @@
+// Dynamic copyright year
+var yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
     var navbar = document.getElementById('navbar');
